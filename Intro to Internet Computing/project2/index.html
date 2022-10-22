@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Bootstrap Theme Simply Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        .grad1 {
+
+            background-image: url(math.png), linear-gradient(to bottom, #de6262, #42275a);
+        }
+
+        .grad2 {
+            background-image: linear-gradient(to bottom, #42275a, #734b6d);
+        }
+
+        .grad3 {
+            background-image: linear-gradient(to bottom, #734b6d, #2c3e50);
+        }
+
+        .grad4 {
+            background-image: linear-gradient(to right, #de6262, #ffb88c);
+        }
+
+        .grad5 {
+            background-image: linear-gradient(to bottom, #2c3e50, #2f2f2f);
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #C24B44;
+            /* Green */
+            color: #cecece;
+        }
+
+        .bg-2 {
+            background-color: #120a09;
+            /* Dark Blue */
+            color: #cecece;
+        }
+
+        .bg-3 {
+            background-color: #967268;
+            /* White */
+            color: #080a09;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+            background-image: linear-gradient(to bottom, #2c3e50, #2f2f2f);
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+
+        .tierBegin {
+            border-bottom: solid black
+        }
+
+        .sTier {
+            border-bottom: solid orangered
+        }
+
+        .aTier {
+            border-bottom: solid orange
+        }
+
+        .bTier {
+            border-bottom: solid burlywood
+        }
+
+        .cTier {
+            border-bottom: solid yellowgreen
+        }
+
+        .dTier {
+            border-bottom: solid lightblue
+        }
+
+        .eTier {
+            border-bottom: solid darkorchid
+        }
+
+        .fTier {
+            border-bottom: solid pink
+        }
+
+        .trashTier {
+            border-bottom: solid lightseagreen
+        }
+
+        .Ncontainer {
+            margin-bottom: 45px;
+            animation: N 2s;
+        }
+
+
+        @keyframes N {
+            0% {
+                transform: translate(0%, -200%)
+            }
+
+            100% {
+                transform: translate(0%, 0%)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://lamp.cse.fau.edu/~jordandiaz2020/p1/">Original</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#Me">WHO</a></li>
+                    <li><a href="#What">WHAT</a></li>
+                    <li><a href="#TierList">TIER LIST</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- First Container -->
+    <div class="container-fluid grad1 text-center" id="Me">
+
+
+        <h1 class="Ncontainer"><strong>Jordan Diaz</strong> </h1>
+
+        <img src="Jordan2.JPG" class="img-responsive img-circle margin" style="display:inline" alt="Jordan2" width="250"
+            height="250">
+        <h1>Computer Science Major At FAU</h1>
+
+    </div>
+
+    <!-- Second Container -->
+    <div class="container-fluid grad2 text-center" id="What">
+        <h1 class="margin"><strong>What I DO</strong></h1>
+        <p> I am a Video Game Developer, I work in the unity game engine using C#. I love to study what makes a game so
+            fun,
+            analyzing the foundations of a product to be sold for maximum satisfaction. So generally, I will have an
+            emphasis on the gaming comminity
+            and how they perceive the "meta" of a select game.
+            I
+            made a tier list of one of my favorite video games Super Smash Bros. Melee on the Nintendo Gamecube.
+            This is my Second time using HTML with CSS, so I use this page to test the ropes and see what I can do for
+            my Second
+            attempt
+            using a new coding language. I was also curious as to how a tier list website would be created, so I decided
+            to try
+            it for myself. You can see my first attempt at html by pressing the button below. Past that you will find
+            the tier list from the first attempt
+            in a new style.
+        </p>
+        <a href="https://lamp.cse.fau.edu/~jordandiaz2020/p1/" class="btn btn-default btn-lg grad4">
+            <span class="glyphicon glyphicon-open-file"></span> Original Website
+        </a>
+    </div>
+
+    <!-- Third Container (Grid) -->
+    <div class="container-fluid grad3 text-center" id="TierList">
+        <h1 class="margin">SUPER SMASH BROS MELEE TIER LIST</h1>
+        <table style="width:100%">
+            <!--Start of the first Colomn-->
+            <tr class="tierBegin">
+                <th style="text-align:center">Tier</th>
+                <th colspan="10" style="text-align:center">Characters</th>
+            </tr>
+            <!--end of the first Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="sTier">
+                <th style="text-align:center"><span style="color:orangered"> S</span></th>
+                <td>Jigglypuff</td>
+                <td>Fox</td>
+                <td>Marth</td>
+
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="aTier">
+                <th style="text-align:center"><span style="color:orange">A</span></th>
+                <td>Falco</td>
+                <td>Sheik</td>
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="bTier">
+                <th style="text-align:center"><span style="color:burlywood">B</span></th>
+                <td>Captain Falcon</td>
+                <td>Peach</td>
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="cTier">
+                <th style="text-align:center"><span style="color:yellowgreen">C</span></th>
+                <td>Ice Climbers</td>
+                <td>Pikachu</td>
+                <td>Yoshi</td>
+                <td>Samus</td>
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="dTier">
+                <th style="text-align:center"><span style="color:lightblue">D</span></th>
+                <td>Dr. Mario</td>
+                <td>Luigi</td>
+                <td>Mario</td>
+                <td>Ganondorf</td>
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="eTier">
+                <th style="text-align:center"><span style="color:darkorchid">E</span></th>
+                <td>Link</td>
+                <td>DK</td>
+                <td>Mewtwo</td>
+                <td>Young Link</td>
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="fTier">
+                <th style="text-align:center"><span style="color:pink">F</span></th>
+                <td>Game & Watch</td>
+                <td>Ness</td>
+                <td>Pichu</td>
+                <td>Roy</td>
+            </tr>
+            <!--end of the Second Colomn-->
+
+            <!--Start of the Second Colomn-->
+            <tr style="text-align:center" class="trashTier">
+                <th style="text-align:center"><span style="color:lightseagreen">Trash</span></th>
+                <td>Kirby</td>
+                <td>Zelda</td>
+                <td>Bowser</td>
+            </tr>
+            <!--end of the Second Colomn-->
+        </table>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="container-fluid grad5 text-center">
+        <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+    </footer>
+
+</body>
+
+</html>
