@@ -1,0 +1,100 @@
+1 .  # Jordan Diaz, This program manipulates files and parses itself
+2 .  def line_number(file_name, write_to_this):
+3 .      """ This file takes the contents of one file and copies it into another file but with numbered lines """
+4 .  
+5 .      # edge case
+6 .      if file_name == write_to_this:
+7 .          print("Error: Cannot use the same file name")
+8 .          exit(1)
+9 .  
+10 .      try:
+11 .          # Open the files
+12 .          file_name = open(file_name, "r")
+13 .          write_to_this = open(write_to_this, "w")
+14 .  
+15 .          # Go through the file and write to the other
+16 .          count = 1
+17 .          for line in file_name:
+18 .              print(count, ". ", line, file=write_to_this, end="")
+19 .              count += 1
+20 .  
+21 .      except FileNotFoundError as er:
+22 .          print("The file: ", file_name, " does not exist.")
+23 .          print("Exception type: {} : the error message was {} ".format(type(er), er))
+24 .      except PermissionError as er:
+25 .          print("You do not have access to read the file: ", file_name)
+26 .          print("Exception type: {} : the error message was {} ".format(type(er), er))
+27 .      finally:
+28 .          # Close the files
+29 .          file_name.close()
+30 .          write_to_this.close()
+31 .  
+32 .  
+33 .  def parse_functions(file_name):
+34 .      try:
+35 .          file_name = open(file_name, "r")
+36 .  
+37 .          separation_str = "def" + " "
+38 .          curr_function_str = ""
+39 .  
+40 .          count = 1
+41 .          lst_of_def_names = []
+42 .          lst_of_positions = []
+43 .  
+44 .          # Get the name of the function and the line number
+45 .          for line in file_name.readlines():
+46 .  
+47 .              for n in range(0, len(line)):
+48 .                  avoid_str = "#" + " "
+49 .                  if n == line.find(avoid_str) or n + 1 == line.find(avoid_str):
+50 .                      break
+51 .                  elif n == line.find("    " + "#"):
+52 .                      break
+53 .                  elif line.find(separation_str) != -1 and line[n - 1] == ":":
+54 .                      curr_function_str += "\n"
+55 .                  elif line.find("def") == 0:
+56 .                      curr_function_str += line[n]
+57 .                  elif line.find("    ") == 0:
+58 .                      curr_function_str += line[n]
+59 .  
+60 .              curr_name = ""
+61 .  
+62 .              # Build a list of positions and names of functions
+63 .              if line.find("def") == 0:
+64 .                  for i in range(4, line.find("(")):
+65 .                      curr_name += line[i]
+66 .                  lst_of_positions.append(count)
+67 .                  lst_of_def_names.append(curr_name)
+68 .  
+69 .              count += 1
+70 .  
+71 .          separation_str = "def" + " "
+72 .  
+73 .          lst_of_functions = curr_function_str.split(separation_str)
+74 .          lst_of_functions.pop(0)
+75 .  
+76 .          for k in range(0, len(lst_of_functions)):
+77 .              lst_of_functions[k] = separation_str + lst_of_functions[k].replace("    ", "\t")
+78 .  
+79 .          final_lst = []
+80 .          for m in range(0, len(lst_of_def_names)):
+81 .              tple = (lst_of_def_names[m], lst_of_positions[m], lst_of_functions[m])
+82 .              final_lst.append(tple)
+83 .  
+84 .          final_lst.sort()
+85 .          return tuple(final_lst)
+86 .  
+87 .      except FileNotFoundError as er:
+88 .          print("The file: ", file_name, " does not exist.")
+89 .          print("Exception type: {} : the error message was {} ".format(type(er), er))
+90 .      finally:
+91 .          file_name.close()
+92 .  
+93 .  
+94 .  def main():
+95 .      line_number("p1_Diaz_Jordan.py", "test_file.txt")
+96 .      print(parse_functions("funs.py"))
+97 .  
+98 .  
+99 .  if __name__ == "__main__":
+100 .      main()
